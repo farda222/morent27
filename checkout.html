@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Poppins:wght@500&display=swap" rel="stylesheet" />
+    <title>more car</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-bg">
+    <nav class="-mt-16 flex items-center justify-between bg-white p-4">
+      <div class="flex items-center px-2">
+        <a href="index.html">
+          <img src="asset image/Logo.png" alt="Logo" class="mr-2 h-full w-full" />
+        </a>
+        <span class="text-lg font-semibold text-white"></span>
+      </div>
+      <div class="-ml-[9.5rem] mt-32 flex flex-grow items-center justify-center gap-5">
+        <input type="text" placeholder="Search Something Here" class="input-ghost input w-[400%] max-w-xs border-2 border-slate-200 bg-white" />
+        <div class="drawer z-40 -mr-20"></div>
+        <div class="-mr-14">
+          <button class="h-11 w-11 rounded-md border border-slate-300">
+            <img
+              class="px-1 py-1"
+              src="data:image/png;base64,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" />
+          </button>
+        </div>
+      </div>
+      <div class="ml-4">
+        <img src="asset image/profile.png" alt="Profil Pengguna" class="h-10 w-10 rounded-full" />
+      </div>
+    </nav>
+    <div class="container mx-auto flex items-center justify-center align-middle">
+      <div class="mt-10 w-[90%] rounded-xl bg-white p-4">
+        <h1 class="text-lg font-bold text-black">Rental Summary</h1>
+        <p class="mt-1 w-80 text-sm text-blue-300">Prices may change depending on the length of the rental and the price of your rental car.</p>
+        <div class="mt-10 h-24 w-36 rounded-xl bg-blue-600">
+          <div class="flex">
+            <img src="asset image/car12.png" class="mx-2 mt-3 h-[90%] w-[90%]" />
+            <div>
+              <h1 class="container ml-5 text-3xl font-bold text-black">Fortuner</h1>
+              <div class="rating rating-sm ml-5 mt-3 gap-2">
+                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" checked />
+                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" />
+              </div>
+              <p class="ml-5 w-full">440+ Reviewer</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-9 border-t-2"></div>
+        <div class="mt-5 flex gap-[12rem]">
+          <div>
+            <p class="font-medium text-cyan-600">Subtotal</p>
+            <p class="mt-2 font-medium text-cyan-600">Tax</p>
+          </div>
+          <div>
+            <h1 class="text-xl font-semibold text-black">$80.00</h1>
+            <h1 class="text-right text-xl font-semibold text-black">$0</h1>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <input type="text" placeholder="Apply promo code" class="input input-ghost w-full max-w-xs mt-10 rounded-xl bg-white border-none mr-2" / ><button class="btn mt-10 border-none bg-white">Apply now</button>
+        </div>
+        <div class="mt-10">
+          <h1 class="text-xl font-bold text-black">Total Rental Price</h1>
+          <p class="text-cyan-500">Overall price rental</p>
+          <div class="float-right -mt-12">
+            <h1 class="mr-3 text-2xl font-semibold text-black">$80.00</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-10 flex items-center justify-center align-middle">
+      <div class="h-fit w-[90%] rounded-lg bg-white p-5">
+        <h1 class="text-xl font-bold text-black">Billing info</h1>
+        <p class="mt-2 text-cyan-500">Please enter your billing info</p>
+        <p class="float-right -mt-14 text-cyan-500">Step 1 of 4</p>
+        <div class="mt-5">
+          <h1 class="mx-1 text-lg font-semibold text-black">Name</h1>
+          <input type="text" placeholder="Your name" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100" />
+        </div>
+        <div class="mt-10">
+          <h1 class="mx-1 text-lg font-semibold text-black">Address</h1>
+          <input type="text" placeholder="Address" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100" />
+        </div>
+        <div class="mt-10">
+          <h1 class="mx-1 text-lg font-semibold text-black">Phone Number</h1>
+          <input type="text" placeholder="Phone number" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100" />
+        </div>
+        <div class="mt-10">
+          <h1 class="mx-1 text-lg font-semibold text-black">Town/City</h1>
+          <input type="text" placeholder="Town or City" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100 text-blue-300" />
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-10 flex items-center justify-center align-middle">
+      <div class="h-fit w-[90%] rounded-lg bg-white p-5">
+        <h1 class="text-xl font-bold text-black">Rental info</h1>
+        <p class="mt-2 text-cyan-500">Please select your rental date</p>
+        <p class="float-right -mt-14 text-cyan-500">Step 2 of 4</p>
+        <div class="absolute z-20 mb-5 mt-7 flex">
+          <img src="asset image/Ellipse 11.svg" class="z-10 mr-2 h-4" />
+          <h1 class="-mt-1.5 text-lg font-semibold text-black">Pick-Up</h1>
+        </div>
+        <div class="mt-16">
+          <h1 class="mx-1 text-lg font-semibold text-black">Location</h1>
+          <select class="select mt-2 h-16 w-full max-w-xs border-none bg-neutral-100">
+            <option disabled selected>Select your city</option>
+            <option>Sydney</option>
+            <option>New York</option>
+            <option>Loss Angeles</option>
+            <option>Seattle</option>
+            <option>Undergound City</option>
+          </select>
+        </div>
+        <div class="mt-10">
+          <h1 class="mx-1 text-lg font-semibold text-black">Time</h1>
+          <input type="text" placeholder="Input your time" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100" />
+        </div>
+        <div class="mt-10">
+          <h1 class="mx-1 text-lg font-semibold text-black">Date</h1>
+          <input type="text" placeholder="Input your date" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100" />
+        </div>
+        <div class="absolute z-20 mb-5 mt-10 flex">
+          <img src="asset image/Ellipse 12.svg" class="mr-2 h-4" />
+          <h1 class="-mt-1.5 text-lg font-semibold text-black">Drop-Off</h1>
+        </div>
+        <div class="mt-20">
+          <h1 class="mx-1 text-lg font-semibold text-black">Location</h1>
+          <select class="select mt-2 h-16 w-full max-w-xs border-none bg-neutral-100">
+            <option disabled selected>Select your city</option>
+            <option>Sydney</option>
+            <option>New York</option>
+            <option>Loss Angeles</option>
+            <option>Seattle</option>
+            <option>Undergound City</option>
+          </select>
+        </div>
+        <div class="mt-10">
+          <h1 class="mx-1 text-lg font-semibold text-black">Time</h1>
+          <input type="text" placeholder="Input your time" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100" />
+        </div>
+        <div class="mt-10">
+          <h1 class="mx-1 text-lg font-semibold text-black">Date</h1>
+          <input type="text" placeholder="Input your date" class="input mt-2 h-16 w-full max-w-xs bg-neutral-100" />
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-10 flex items-center justify-center align-middle">
+      <div class="h-fit w-[90%] rounded-lg bg-white p-5">
+        <h1 class="text-xl font-bold text-black">Rental info</h1>
+        <p class="mt-2 text-cyan-500">Please select your rental date</p>
+        <p class="float-right -mt-14 text-cyan-500">Step 3 of 4</p>
+        <div class="form-control mt-16">
+          <label class="label cursor-pointer">
+            <img src="asset image/visa.png" class="w-[40%]" />
+            <input type="radio" name="radio-7" class="radio-info radio -mt-2" />
+          </label>
+        </div>
+        <div class="form-control">
+          <label class="label cursor-pointer">
+            <img src="asset image/paypal.png" class="w-[40%]" />
+            <input type="radio" name="radio-7" class="radio-info radio -mt-1" />
+          </label>
+        </div>
+        <div class="form-control -mt-5">
+          <label class="label cursor-pointer">
+            <img src="asset image/bca.png" class="-ml-2 w-[40%]" />
+            <input type="radio" name="radio-7" class="radio-info radio -mt-1" />
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-10 flex items-center justify-center align-middle">
+      <div class="h-fit w-[90%] rounded-lg bg-white p-5">
+        <h1 class="text-xl font-bold text-black">Confirmation</h1>
+        <p class="mt-4 w-64 text-cyan-500">We are getting to the end. Just few clicks and your rental is ready!</p>
+        <p class="float-right -mt-[5.7rem] text-cyan-500">Step 4 of 4</p>
+        <div class="container mx-auto mt-5 flex h-16 w-full justify-center rounded-xl bg-neutral-100 p-3 align-middle">
+          <input type="checkbox" checked="checked" class="checkbox-info checkbox ml-3 mt-2" />
+          <p class="ml-3 mt-1 text-xs text-black font-semibold">I agree with sending an Marketing and newsletter emails. No spam, promissed!</p>
+        </div>
+        <div class="container mx-auto mt-5 flex h-16 w-full justify-center rounded-xl bg-neutral-100 p-3 align-middle mb-10">
+          <input type="checkbox" checked="checked" class="checkbox-info checkbox ml-3 mt-2" />
+          <p class="ml-3 mt-1 text-xs text-black font-semibold">I agree with our terms and conditions and privacy policy!</p>
+        </div>
+        <a class="px-5 py-3 bg-blue-500 text-white rounded-md container active:bg-blue-200 active:text-blue-500 transition-all">Rental Now</a>
+        <img src="asset image/secure.png" class="mt-10">
+        <h1 class="text-lg text-black mt-2 font-bold">All your data are safe</h1>
+        <p class="w-auto text-cyan-600 leading-4 mt-2 mb-3">We are using the most advanced security to provide you the best experience ever.</p>
+      </div>
+    </div>
+  </body>
+  <footer footer class="mt-24 h-full w-full border-t-2 bg-bg">
+    <img class="mx-5 mt-10" src="asset image/Logo.png" />
+    <p class="mx-5 mt-4 w-[17rem] text-blue-300">Our vision is to provide convenience and help increase your sales business.</p>
+    <div class="flex">
+      <div class="mx-5 mt-16">
+        <h1 class="text-3xl font-semibold text-black">About</h1>
+        <ul class="mt-5">
+          <li><a class="text-xl text-sky-600"> How it works</a></li>
+          <li class="mt-3"><a class="text-xl text-sky-600">Featured</a></li>
+          <li class="mt-3"><a class="text-xl text-sky-600">Partnership</a></li>
+          <li class="mt-3"><a class="text-xl text-sky-600">Bussiness Relation</a></li>
+        </ul>
+      </div>
+      <div class="ml-16 mt-16">
+        <h1 class="text-3xl font-semibold text-black">Social</h1>
+        <ul class="mt-5">
+          <li><a class="text-xl text-sky-600">Discord</a></li>
+          <li class="mt-3"><a class="text-xl text-sky-600">Instagram</a></li>
+          <li class="mt-3"><a class="text-xl text-sky-600">Twitter</a></li>
+          <li class="mt-3"><a class="text-xl text-sky-600">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mx-5 mt-14">
+      <h1 class="text-3xl font-semibold text-black">Community</h1>
+      <ul class="mt-5">
+        <li><a class="text-xl text-sky-600">Events</a></li>
+        <li class="mt-3"><a class="text-xl text-sky-600">Blog</a></li>
+        <li class="mt-3"><a class="text-xl text-sky-600">Podcast</a></li>
+        <li class="mt-3"><a class="text-xl text-sky-600">Invite a friend</a></li>
+      </ul>
+    </div>
+    <div class="m-5 mt-14 flex gap-[6.7rem]">
+      <a class="font-semibold text-black">Privacy Policy</a>
+      <a class="font-semibold text-black">Terms & Condition</a>
+    </div>
+    <div class="mx-5 mb-5 mt-10">
+      <h1 class="text-sm font-semibold text-black">&copy;2022 MORENT.All rights reserved</h1>
+    </div>
+  </footer>
+</html>
